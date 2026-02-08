@@ -1,16 +1,38 @@
-import { Html, Head, Body } from "@react-email/components";
+import {
+  Html,
+  Head,
+  Body,
+  Button,
+  Container,
+  Text,
+} from "@react-email/components";
 
 export const FirstEmail = () => {
   return (
     <Html>
       <Head />
       <Body>
-        <h1 className="text-red-500 font-bold text-2xl">
-          This is my first email
-        </h1>
-        <p className="text-blue-500 font-bold text-2xl">
-          here im just testing the email components and styling
-        </p>
+        <Container>
+          <Text style={{ fontSize: 24, fontWeight: "bold" }}>
+            This is my first email
+          </Text>
+          <Text
+            style={{ fontSize: 16, color: "blue", textDecoration: "underline" }}
+          >
+            here im just testing the email components and styling
+          </Text>
+          <Button
+            href="https://www.google.com"
+            style={{
+              backgroundColor: "blue",
+              color: "white",
+              padding: 10,
+              borderRadius: 5,
+            }}
+          >
+            Click me
+          </Button>
+        </Container>
       </Body>
     </Html>
   );
