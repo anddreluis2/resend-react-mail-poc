@@ -15,7 +15,7 @@ const SendMailForm = () => {
     <div>
       <h1 className="text-xl mb-4">React Email + Resend</h1>
       <form action={formAction}>
-        <div className="flex gap-2">
+        <div className="flex gap-2 mb-2">
           <Input
             id="email"
             name="email"
@@ -30,14 +30,14 @@ const SendMailForm = () => {
             className="h-10 border text-base"
             disabled={isPending}
           >
-            {isPending ? "Submitting" : "Send Email"}
+            {isPending ? "..." : "Send Email"}
           </Button>
         </div>
         {currentState.errors && (
-          <p className="text-red-500">{currentState.errors}</p>
+          <p className="text-red-500 text-sm">{currentState.errors}</p>
         )}
         {currentState.message && (
-          <p className="text-green-500">{currentState.message}</p>
+          <p className="text-green-500 text-sm">{currentState.message}</p>
         )}
       </form>
     </div>
